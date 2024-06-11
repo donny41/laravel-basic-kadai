@@ -24,4 +24,10 @@ Route::get('/', function () {
 
 Route::get('/posts', [PostController::class, 'index']);
 
+Route::get('/posts/create', [PostController::class, 'create']);
+
+Route::post('/posts/create', [PostController::class, 'store'])->name('posts.store');
+// Route::post('/vendors/store', [VendorController::class, 'store'])->name('vendors.store');
+
+// Route::get('products/{id}', [ProductController::class, 'show']);
 Route::get('/posts/{id}', [PostController::class, 'show']);
